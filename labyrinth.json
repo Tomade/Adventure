@@ -1,0 +1,26 @@
+{
+  "rooms": {
+    "start": {
+      "description": "You are standing next to a river bank.\nThere is a hill south of here. You see wilderness in the east.",
+      "exits" : { "south" : "grotto_entry", "east" : "eastwild" },
+      "objects" : {
+        "bank" : "Rocks and pebbles.  You notice an old rusty knife near the water line.",
+        "hill" : "Looks like a low hill, perhaps you should get closer to it.",
+        "knife" : "This might be useful later."
+      }
+    },
+    "grotto_entry": {
+      "description": "You reached the hill.\nYou can see a cave on the side.",
+      "exits" : {"north" : "start"},
+      "objects" : {}
+    },
+    "eastwild" : {
+      "description": "You're about to get lost in the wildeness.\nThere's a river bank to the west",
+      "exits": {
+        "west": "start"
+      },
+      "objects" : {}
+    }
+  }
+}
+
