@@ -15,7 +15,7 @@
       "objects" : {}
     },
     "eastwild" : {
-      "description": "You're about to get lost in the wildeness.\nThere's a river bank to the west",
+      "description": "You're about to get lost in the wilderness.\nThere's a river bank to the west",
       "exits": {
         "west": "start"
       },

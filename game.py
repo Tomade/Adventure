@@ -17,9 +17,9 @@ class GameCmd(cmd.Cmd):
     def do_go(self, arg):
         print(maze.go(arg))
 
-    def do_look(self, arg):
-        """Check out the place"""
-        print("You look at the {what} - Weird stuff!".format(what = arg))
+    def do_look_at(self, arg):
+        """Examine something"""
+        print(maze.look_at(arg))
 
 if __name__ == "__main__":
     maze = Adventure("labyrinth.json")
