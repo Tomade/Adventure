@@ -30,10 +30,13 @@ class GameCmd(cmd.Cmd):
 maze = Adventure("labyrinth.json")
 game = GameCmd()
 
-
 @app.route('/')
 def hello_world():
-    return str(game.onecmd(request.args.get("input")))
+    return '<form action="action" method="get"><input name="input" type="text"></form>'
+
+@app.route('/action')
+def action():
+    return game.onecmd(request.args.get("input"))
 
 if __name__ == '__main__':
     app.run(debug=True)
