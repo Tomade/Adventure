@@ -1,6 +1,7 @@
 __author__ = 'shade'
 
-import cmd, textwrap
+import cmd
+from textwrap import fill
 from adventure import Adventure
 
 class GameCmd(cmd.Cmd):
@@ -15,11 +16,15 @@ class GameCmd(cmd.Cmd):
         return True
 
     def do_go(self, arg):
-        print(maze.go(arg))
+        print(fill(maze.go(arg)))
 
     def do_look_at(self, arg):
         """Examine something"""
-        print(maze.look_at(arg))
+        print(fill(maze.look_at(arg)))
+
+    def do_search(self, arg):
+        print(fill(maze.search(arg)))
+
 
 if __name__ == "__main__":
     maze = Adventure("labyrinth.json")

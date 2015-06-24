@@ -31,3 +31,16 @@ class Adventure:
             return objects_here[what]
         else:
             return "No such thing here."
+
+    def search(self, what = None):
+        """Return the list of visible objects in the room if arg is empty"""
+        """if there is a 'what', for now return just the object description"""
+        if what == "":
+            objects_here = self.room["objects"]
+            object_names = [str(x) for x in objects_here.keys()]
+            name_list = ""
+            for name in object_names:
+                name_list += " {}".format(name)
+
+            s = "You search around and find: " + name_list
+            return s
